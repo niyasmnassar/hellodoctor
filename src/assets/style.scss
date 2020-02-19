@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.users-wrap{
+    background-position: center;
+    &::before{
+        background: rgba(0, 0, 0, 0) -webkit-gradient(linear, left top, right top, from(#26aef9), to(#22f285)) repeat scroll 0 0;
+        background: rgba(0, 0, 0, 0) linear-gradient(to right, #26aef9 0%, #22f285 100%) repeat scroll 0 0;
+        content: "";
+        height: 100%;
+        left: 0;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    // height: calc(100vh - 3.5rem );
+     height: calc(100vh);
+    .card{
+        background-color: transparent;
+        border: none;
+    }
+    .card-subtitle{
+        color:#fff;
+    }
+    .login-icon{
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-moz-border-radius: 50%;
+        width: 3.75rem;
+        height: 3.75rem;
+        padding: .625rem;
+        display: inline-block;
+        svg{
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            font-size: 1.5rem;
+            top: 6px;
+        }
+        &::before{
+            
+            background-color: #24cac9;
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+    .slogan{
+        h2{
+            color: #fff;
+            span{
+                font-weight: 300;
+                display: block;
+                line-height: normal;
+                
+            }
+        }
+    } 
+    .cta-book{
+        background: rgba(0, 0, 0, 0) -webkit-gradient(linear, left top, right top, from(#26aef9), to(#22f285)) repeat scroll 0 0;
+        background: rgba(0, 0, 0, 0) linear-gradient(to right, #26aef9 0%, #22f285 100%) repeat scroll 0 0;
+        border: none;
+        font-size: 20px;
+        // @media (max-width:767px){
+        //     position: absolute;
+        //     top: 0px;
+        //     right: 15px;
+        // }
+    }
+    .log-text{
+        color:#fff;
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    
+    .inputText{
+        width: 100%;
+        outline: none;
+        border:none;
+        border-bottom: 1px solid #777;
+        box-shadow: none !important;
+    }
+    .inputText:focus{
+        border-color: blue;
+        border-width: medium medium 2px;
+    }
+    .form-group{
+        position: relative;
+        .floating-label {
+            position: absolute;
+            pointer-events: none;
+            top: 12px;
+            left: 10px;
+            transition: 0.2s ease all;
+            opacity: 0.5;
+        }
+    }
+    
+    input{
+        &:focus ~ .floating-label{
+            top: -12px;
+            left: 10px;
+            font-size: 13px;
+            opacity: 1;
+            background-color: rgba(255,255,255,1);
+        }
+        &:not(:focus):valid ~ .floating-label{
+            top: -10px;
+            left: 10px;
+            font-size: 13px;
+            opacity: 1;
+            background-color: rgba(255,255,255,1);
+        }
+    }
+}
